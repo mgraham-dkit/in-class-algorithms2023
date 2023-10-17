@@ -9,9 +9,9 @@ public class StringUtilities {
         printArray(result);
     }
 
-    public static void printArray(String [] nums){
-        for(int i = 0; i < nums.length; i++){
-            System.out.println(i+") " + nums[i]);
+    public static void printArray(String [] text){
+        for(int i = 0; i < text.length; i++){
+            System.out.println(i+") " + text[i]);
         }
     }
 
