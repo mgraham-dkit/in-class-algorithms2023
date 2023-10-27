@@ -13,4 +13,23 @@ public class DogUtilities {
         dogs[pos] = null;
         return deleted;
     }
+
+    public static Dog shiftDelete(Dog[] dogs, int pos) {
+        if (dogs == null) {
+            return null;
+        }
+        if (pos < 0 || pos >= dogs.length) {
+            return null;
+        }
+        // Save value to be deleted
+        Dog deleted = dogs[pos];
+
+        for(int i = pos; i < dogs.length - 1; i++){
+            dogs[i] = dogs[i+1];
+        }
+
+        dogs[dogs.length-1] = null;
+
+        return deleted;
+    }
 }
