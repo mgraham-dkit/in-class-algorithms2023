@@ -32,4 +32,24 @@ public class DogUtilities {
 
         return deleted;
     }
+
+    public static Dog [] resizeDelete(Dog[] dogs, int pos) {
+        if (dogs == null) {
+            return null;
+        }
+        if (pos < 0 || pos >= dogs.length) {
+            return null;
+        }
+
+        Dog [] dest = new Dog[dogs.length-1];
+        int destTracker = 0;
+
+        for(int i = 0; i < dogs.length; i++){
+            if(pos != i) {
+                dest[destTracker] =dogs[i];
+                destTracker++;
+            }
+        }
+        return dest;
+    }
 }
